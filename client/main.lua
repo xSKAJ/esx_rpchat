@@ -58,7 +58,7 @@ AddEventHandler('sendProximityMessageDarkWeb', function(message)
 		if xPlayer.group == 'best' or xPlayer.group == 'superadmin' or xPlayer.group == 'admin' or xPlayer.group == 'moderator' or xPlayer.group == 'support' or xPlayer.group == 'trailsupport' then
 			TriggerEvent('chatMessage', '[' .. _source .. ']' .. "DARKWEB: ", {255, 0, 0}, message)
 		else
-			TriggerEvent('chatMessage',"DARKWEB", {255, 0, 0}, message)
+			TriggerEvent('chatMessage', '[' .. _source .. ']' .. "DARKWEB", {255, 0, 0}, message)
 		end
 	end
 end)
