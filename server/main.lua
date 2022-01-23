@@ -199,7 +199,7 @@ AddEventHandler('sendTwtServer', function(message)
 			xPlayer.showNotification('~y~Pobrano opłatę~r~ $100')
 			TriggerClientEvent('chatMessage', -1, "[" .. _source .. "]" .. "🕊️ @" ..name.firstname..' '..name.lastname, {30, 144, 255}, message)
 		else
-			TriggerClientEvent('chatMessage', -1, "🕊️ @" ..name.firstname..' '..name.lastname, {30, 144, 255}, message)
+			TriggerClientEvent('chatMessage', -1, "[" .. _source .. "]" .. "🕊️ @" ..name.firstname..' '..name.lastname, {30, 144, 255}, message)
 		end
 	else
 		xPlayer.showNotification('Nie posiadasz wystarczająco gotówki')
@@ -237,7 +237,7 @@ RegisterCommand('lspd', function(source, args, rawCommand)
 					TriggerClientEvent('esx:showNotification', source, '~y~Pobrano opłatę~r~ 200$')
 					TriggerClientEvent('chatMessage', -1, "[".. _source .."] 👮 @" ..name.firstname..' '..name.lastname..": ", {30, 144, 255}, msg)
 				else
-					TriggerClientEvent('chatMessage', -1, "👮 @" ..name.firstname..' '..name.lastname..": ", {30, 144, 255}, msg)
+					TriggerClientEvent('chatMessage', -1, "[".. _source .."] 👮 @" ..name.firstname..' '..name.lastname..": ", {30, 144, 255}, msg)
 				end
 			else
 				TriggerClientEvent('esx:showNotification', source, '~r~Nie masz pieniędzy!')
@@ -299,7 +299,7 @@ AddEventHandler('senddarkServer', function(message)
 			xPlayer.removeAccountMoney('bank', 2500)
 			xPlayer.showNotification('~y~Pobrano opłatę~r~ $2500')
 		else
-			TriggerClientEvent('chatMessage', -1, "💻 DARKWEB ", {255, 0, 0}, message)
+			TriggerClientEvent('chatMessage', -1, "[" .. _source .. "]" .."💻 DARKWEB ", {255, 0, 0}, message)
 		end
 	else
 		xPlayer.showNotification('Nie posiadasz wystarczająco gotówki')
